@@ -60,13 +60,13 @@ for (i in 1:drivers.num) {
         ##------------------------------------------------------------------
         routes.data[j,] <- c(j, nrow(p), min(p$x), max(p$x), min(p$y), max(p$y))
     }
-    save(routes.data, file=paste0(summ.dir,"/",i,"_summary.Rdata") )
+    save(routes.data, file=paste0(summ.dir,"/",drivers.ls[i],"_summary.Rdata") )
     
     
     ##------------------------------------------------------------------
     ## plot the trajectories
     ##------------------------------------------------------------------
-    pdf(file=paste0(figs.dir,"/",i,"_summary.pdf"))
+    pdf(file=paste0(figs.dir,"/",drivers.ls[i],"_summary.pdf"))
     for (k in 1:routes.num) {
         load(paste0(drivers.ls[i],"/",gsub(".csv",".Rdata", routes.ls[k])))
         if (k == 1) {
