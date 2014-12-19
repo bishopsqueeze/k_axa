@@ -73,7 +73,7 @@ for (i in 1:drivers.num) {
             plot(p$x,p$y, type="l", col=k,
                 xlim=c(min(routes.data[,"minx"]), max(routes.data[,"maxx"])),
                 ylim=c(min(routes.data[,"miny"]), max(routes.data[,"maxy"])),
-                main=(paste0("driver = ",i)))
+                main=(paste0("driver = ",drivers.ls[i])))
         } else {
             lines(p$x,p$y, type="l", col=k)
         }
